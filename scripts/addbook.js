@@ -2,19 +2,19 @@ const SERVER_URL = getUrl();
 const CLIENT_URL = getUrl2();
 
 $(document).ready(function() {
-    postAuthors();
+    postBooks();
 });
 
-function postAuthors() {
+function postBooks() {
     $('#add-button').click(function(event) {
         event.preventDefault();
         let formObj = {};
-        formObj.fname = $('#fname').val();
-        formObj.lname = $('#lname').val();
-        formObj.biography = $('#textarea').val();
-        formObj.portrait = $('#portrait').val();
-        $.post(`${SERVER_URL}/authors`, formObj).then(function(result) {
-            window.location.replace(`${CLIENT_URL}/authors`);
+        formObj.title = $('#title').val();
+        formObj.genre = $('#genre').val();
+        formObj.description = $('#description').val();
+        formObj.cover = $('#cover').val();
+        $.post(`${SERVER_URL}/books`, formObj).then(function(result) {
+            window.location.replace(`${CLIENT_URL}/books`);
         });
     });
 }

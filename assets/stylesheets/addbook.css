@@ -1,0 +1,38 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 16em;
+  width: 100%;
+}
+
+.cards {
+  width: 80%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  height: 100%;
+}
+
+.description {
+  font-size: .5em;
+}
+
+.add {
+    width: 100%;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.row {
+  width: 75%;
+}
