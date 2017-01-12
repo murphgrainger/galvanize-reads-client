@@ -2,6 +2,7 @@ const SERVER_URL = getUrl();
 const CLIENT_URL = getUrl2();
 
 $(document).ready(function() {
+    $('select').material_select();
     postBooks();
 });
 

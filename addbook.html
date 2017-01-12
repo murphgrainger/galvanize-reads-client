@@ -34,36 +34,46 @@
             <div class="row">
                 <h4>Add Book</h4>
             </div>
-            <div class="row">
-                <form class="col s12 m12 l12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="title" type="text" class="validate">
-                            <label for="title">Title</label>
-                        </div>
+            <form class="container">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="title" type="text" class="validate">
+                        <label for="title">Title</label>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="genre" type="text" class="validate">
-                            <label for="genre">Genre</label>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="genre" type="text" class="validate">
+                        <label for="genre">Genre</label>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="description" class="materialize-textarea"></textarea>
-                            <label for="description">Description</label>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea"></textarea>
+                        <label for="description">Description</label>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="cover" type="text" class="validate">
-                            <label for="cover">Cover URL</label>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="cover" type="text" class="validate">
+                        <label for="cover">Cover URL</label>
                     </div>
-                    <a class="waves-effect waves-light btn">
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select multiple>
+                            <option value="" disabled selected>Select Author(s)</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row button">
+                    <a class="waves-effect waves-light btn red">
                         <i class="material-icons right" id="add-button">send</i>Send</a>
-                </form>
-            </div>
+                </div>
+            </form>
         </main>
         <footer class="footer-copyright">
             <div class="container">
