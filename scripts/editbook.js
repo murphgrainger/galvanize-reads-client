@@ -29,7 +29,7 @@ function getUrl() {
     if (window.location.host.indexOf('localhost') != -1) {
         return 'http://localhost:3000';
     } else {
-        return 'https://line-waiter-db.herokuapp.com';
+        return 'https://galvanize-reads-mg.firebaseapp.com';
     }
 }
 
@@ -37,6 +37,6 @@ function getUrl2() {
     if (window.location.host.indexOf('localhost') != -1) {
         return 'http://localhost:8080';
     } else {
-        return 'https://line-waiter.firebaseapp.com';
+        return 'https://galvanize-reads-mg.firebaseapp.com';
     }
 }
