@@ -61,7 +61,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <select multiple id="author-field"></select>
+                        <select multiple id="author-field" class=""></select>
                     </div>
                 </div>
                 <div class=" row button">
@@ -77,11 +77,10 @@
             </div>
         </footer>
         <script id="author-template" type="text/x-handlebars-template">
-            <option value="" disabled selected>Select Author(s)</option>
+            <option value="" disabled selected>Select Author</option>
             {{#each data}}
-                <option id="{{this.id}}">{{this.fname}}
-                    {{this.lname}}
-                </option>
+                <option id="{{this.id}}" class="option {{this.lname}}" data-id="{{this.id}}">
+                    {{this.lname}}</option>
             {{/each}}
         </script>
     </body>
