@@ -5,7 +5,7 @@
         <title>Galvanize Reads</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-        <script src="scripts/books.js" type="text/javascript"></script>
+        <script src="scripts/eachbook.js" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
@@ -31,17 +31,7 @@
             </nav>
         </header>
         <main>
-            <div class="col s2 button-container">
-                <a class="btn-floating waves-effect waves-light btn green" href="/addbook.html">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                </a>
-                <a class="btn-floating waves-effect waves-light btn yellow darken-3" href="/editbook.html">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                </a>
-                <a class="btn-floating waves-effect waves-light btn red" href="/deletebook.html">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                </a>
-            </div>
+            <div class="col s2 button-container"></div>
             <div class="col s10 cards"></div>
         </main>
         <footer class="footer-copyright">
@@ -51,7 +41,7 @@
         </footer>
 
         <script id="card-template" type="text/x-handlebars-template">
-            {{#each data}}
+            {{#each book}}
                 <div class="card horizontal">
                     <div class="card-image">
                         <img class="card-image" src="{{this.cover}}">
@@ -65,8 +55,8 @@
                             </p>
                             <p class="description">{{this.genre}}</p>
                             <p class="description">{{this.description}}</p>
-                            <a class="waves-effect waves-light btn view-book" href="eachbook.html?id={{this.book_id}}">
-                                <span>View Book</span>
+                            <a class="waves-effect waves-light btn view-book yellow darken-3" href="editbookform.html?id={{this.book_id}}">
+                                <span>Edit Book</span>
                             </a>
                         </div>
                     </div>
