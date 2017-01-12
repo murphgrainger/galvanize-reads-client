@@ -5,8 +5,7 @@ const cleanQuery = queryParse(window.location.search);
 $(document).ready(function() {
     getBooks(cleanQuery.id)
         .then(addBooktoPage)
-        // .then(getAuthors)
-        // .then(addUserDegrees)
+        .then(editBook)
         .catch(errorFunction);
 });
 
@@ -23,12 +22,7 @@ function getBooks(id) {
     return $.get(`${SERVER_URL}/books/${id}`);
 }
 
-// function getAuthors(id) {
-//     return $.get(`${API_URL}/user/${id}/degree`);
-// }
-
 function addBooktoPage(book) {
-    console.log(book);
     let source = $('#book-template').html();
     let template = Handlebars.compile(source);
     let context = {
@@ -36,17 +30,33 @@ function addBooktoPage(book) {
     };
     let html = template(context);
     $('#form').html(html);
+    $('select').material_select();
+    return book;
 }
 
-// function addUserDegrees(degree) {
-//     let source = $('#degree-template').html();
-//     let template = Handlebars.compile(source);
-//     let context = {
-//         degree
-//     };
-//     let html = template(context);
-//     $('.degree-section').html(html);
-// }
+function editBook(data) {
+    $('#edit-button').click(function(event) {
+        event.preventDefault();
+        let formObj = {};
+        formObj.book_id = data[0].book_id;
+        formObj.title = $('#title').val();
+        formObj.genre = $('#genre').val();
+        formObj.description = $('#description').html();
+        formObj.cover = $('#cover').val();
+        formObj.author = $('#author-field').val();
+        formObj.author_id = Number($(`.${formObj.author}`).attr('id'));
+        $.ajax({
+            url: `${SERVER_URL}/books/${data[0].book_id}`,
+            method: "PUT",
+            data: formObj,
+            dataType: "json",
+            success: function() {
+                window.location.replace(`${CLIENT_URL}/books`);
+            }
+        });
+    });
+}
+
 
 function getURL() {
     if (window.location.host.indexOf('localhost') != -1) {

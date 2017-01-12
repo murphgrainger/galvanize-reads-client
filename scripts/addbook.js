@@ -30,7 +30,7 @@ function postBooks(data) {
         let formObj = {};
         formObj.title = $('#title').val();
         formObj.genre = $('#genre').val();
-        formObj.description = $('#description').val();
+        formObj.description = $('#description').html();
         formObj.cover = $('#cover').val();
         formObj.author = $('#author-field').val();
         formObj.author_id = Number($(`.${formObj.author}`).attr('id'));
