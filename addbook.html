@@ -61,15 +61,10 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <select multiple>
-                            <option value="" disabled selected>Select Author(s)</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
+                        <select multiple id="author-field"></select>
                     </div>
                 </div>
-                <div class="row button">
+                <div class=" row button">
                     <a class="waves-effect waves-light btn red">
                         <i class="material-icons right" id="add-button">send</i>Send</a>
                 </div>
@@ -81,5 +76,13 @@
                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </footer>
+        <script id="author-template" type="text/x-handlebars-template">
+            <option value="" disabled selected>Select Author(s)</option>
+            {{#each data}}
+                <option id="{{this.id}}">{{this.fname}}
+                    {{this.lname}}
+                </option>
+            {{/each}}
+        </script>
     </body>
 </html>

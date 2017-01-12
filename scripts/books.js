@@ -18,6 +18,7 @@ function showBooks(data) {
     let context = {
         data
     };
+    console.log(context);
     let html = template(context);
     $('.cards').html(html);
     return data;
