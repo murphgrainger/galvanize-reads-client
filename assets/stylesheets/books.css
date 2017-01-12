@@ -5,8 +5,14 @@ main {
   align-items: center;
 }
 
+.add {
+  width: 100%;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
 .card {
-  height: 12em;
+  height: 15em;
   width: 100%;
 }
 
@@ -25,4 +31,12 @@ main {
 
 .description {
   font-size: .5em;
+}
+
+.card-action {
+  padding-top: .25em!important;
+  padding-bottom: .25em!important;
+  padding-left: .75em;
+  padding-right: .75em;
+  font-size: .75em;
 }

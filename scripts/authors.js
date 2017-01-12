@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
 function getAuthors() {
-    return $.get(`${SERVER_URL}/authors/all`);
+    return $.get(`${SERVER_URL}/authors`);
 }
 
 function showAuthors(data) {

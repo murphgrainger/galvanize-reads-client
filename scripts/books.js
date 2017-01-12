@@ -8,10 +8,11 @@ $(document).ready(function() {
 
 
 function getBooks() {
-    return $.get(`${SERVER_URL}/books/all`);
+    return $.get(`${SERVER_URL}/books`);
 }
 
 function showBooks(data) {
+    console.log(data);
     let source = $('#card-template').html();
     let template = Handlebars.compile(source);
     let context = {

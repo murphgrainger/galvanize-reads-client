@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/stylesheets/main.css" media="screen" title="no title">
         <link rel="stylesheet" href="assets/stylesheets/books.css" media="screen" title="no title">
     </head>
@@ -20,16 +21,20 @@
                         <i class="material-icons">library_books</i>Galvanize Reads</a>
                     <ul id="nav-mobile" class="right">
                         <li>
-                            <a href="books.html">Books</a>
+                            <a href="books">Books</a>
                         </li>
                         <li>
-                            <a href="authors.html">Authors</a>
+                            <a href="authors">Authors</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
+            <div class="row add">
+                <a class="waves-effect waves-light btn red" href="/addbook.html">
+                    <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Add A Book</a>
+            </div>
             <div class="row cards"></div>
         </main>
         <footer class="footer-copyright">
@@ -48,10 +53,16 @@
                     <div class="card-stacked">
                         <div class="card-content">
                             <h6>{{this.title}}</h6>
+                            <p class="description">
+                                {{this.fname}}
+                                {{this.lname}}
+                            </p>
+                            <p class="description">{{this.genre}}</p>
                             <p class="description">{{this.description}}</p>
                         </div>
                         <div class="card-action">
                             <a href="#">Edit</a>
+                            <a href="#">Delete</a>
                         </div>
                     </div>
                 </div>
