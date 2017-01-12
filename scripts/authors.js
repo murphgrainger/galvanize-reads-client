@@ -5,7 +5,6 @@ $(document).ready(function() {
         .then(showAuthors);
 });
 
-
 function getAuthors() {
     return $.get(`${SERVER_URL}/authors`);
 }
@@ -20,10 +19,6 @@ function showAuthors(data) {
     $('.cards').html(html);
     return data;
 }
-
-
-
-
 
 function getUrl() {
     if (window.location.host.indexOf('localhost') != -1) {
