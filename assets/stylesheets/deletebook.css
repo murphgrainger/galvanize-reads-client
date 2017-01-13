@@ -56,3 +56,8 @@ main {
 .delete-button i {
 margin: 0;
 }
+
+.button-col {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -60,3 +60,8 @@ margin: 0;
 .names {
   font-size: 1em;
 }
+
+.button-col {
+  display: flex;
+  justify-content: flex-end;
+}
