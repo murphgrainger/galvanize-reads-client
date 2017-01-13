@@ -1,13 +1,11 @@
 const SERVER_URL = getUrl();
 const CLIENT_URL = getUrl2();
 
-
 $(document).ready(function() {
     getBooks()
         .then(showBooks)
         .then(deleteBook);
 });
-
 
 function getBooks() {
     return $.get(`${SERVER_URL}/books`);
