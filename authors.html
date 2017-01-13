@@ -63,10 +63,15 @@
                                 <h6>{{this.fname}}</h6>
                                 <h6>&nbsp;{{this.lname}}</h6>
                             </div>
-                            <div class="row title">
-                                <i class="fa fa-book" aria-hidden="true"></i>
-                                <a class="title" href="eachbook.html?id={{this.book_id}}">&nbsp;&nbsp;{{this.title}}</a>
-                            </div>
+                            {{#each books}}
+                                <div class="row title">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                    <a href="eachbook.html?id={{this.id}}">
+                                        <span>&nbsp;&nbsp;{{this.title}}
+                                        </span>
+                                    </a>
+                                </div>
+                            {{/each}}
                             <p class="description">{{this.biography}}</p>
                             <a class="waves-effect waves-light btn view-author" href="eachauthor.html?id={{this.id}}">
                                 <span>View Author</span>
