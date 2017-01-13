@@ -68,6 +68,7 @@ main {
 .names {
   display: flex;
   flex-direction: row;
+  margin-bottom: .25em;
 }
 
 .title {
