@@ -46,7 +46,7 @@ main {
 }
 
 .description {
-  font-size: .5em;
+  font-size: .75em;
 }
 
 .card-action {
@@ -76,13 +76,13 @@ main {
 .names {
   display: flex;
   flex-direction: row;
-  font-size: .75em;
+  font-size: .85em;
   margin-bottom: .25em;
 }
 
 .genre {
   padding-bottom: .5em;
-  font-size: .6em;
+  font-size: .85em;
 }
 
 .title {

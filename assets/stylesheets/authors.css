@@ -42,7 +42,7 @@ main {
 }
 
 .description {
-  font-size: .5em;
+  font-size: .75em;
 }
 
 .add {
@@ -68,12 +68,11 @@ main {
 .names {
   display: flex;
   flex-direction: row;
-  margin-bottom: .5em;
 }
 
 .title {
   margin-bottom: .5em;
-  font-size: .6em;
+  font-size: .85em;
   display: flex;
   flex-direction: row;
 }
