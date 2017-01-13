@@ -16,8 +16,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-left: 1em;
   padding-right: 1em;
+  text-align: center;
+  color: #29AEE8;
 }
 
 .button-container a {
