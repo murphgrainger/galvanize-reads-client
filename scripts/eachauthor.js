@@ -5,6 +5,7 @@ const cleanQuery = queryParse(window.location.search);
 $(document).ready(function() {
     getAuthors(cleanQuery.id)
         .then(addAuthortoPage)
+        .then(deleteAuthor)
         .catch(errorFunction);
 });
 
@@ -30,6 +31,24 @@ function addAuthortoPage(author) {
     let html = template(context);
     $('.cards').html(html);
     return author;
+}
+
+function deleteAuthor(data) {
+    $('.delete-button').click(function(event) {
+        let deleteId = $(this).attr('id');
+        let authorObj = {
+            id: deleteId
+        };
+        $.ajax({
+            url: `${SERVER_URL}/authors`,
+            method: "DELETE",
+            data: authorObj,
+            dataType: "json",
+            success: function() {
+                window.location.replace(`${CLIENT_URL}/authors`);
+            }
+        });
+    });
 }
 
 function errorFunction() {

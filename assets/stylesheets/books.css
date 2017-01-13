@@ -56,12 +56,11 @@ main {
 }
 
 .view-book {
-  width: 7em;
+  /*width: 7em;
   height: 2em;
   display: flex;
-  align-items: center;
-  margin-top: 1em;
-  background: #29AEE8
+  align-items: center;*/
+  margin: 1em;
 }
 
 .view-book span{
@@ -87,4 +86,10 @@ main {
 .title {
   font-size: .75em;
   margin-bottom: .25em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

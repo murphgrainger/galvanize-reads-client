@@ -57,9 +57,14 @@
                             </div>
                             <p class="description">{{this.genre}}</p>
                             <p class="description">{{this.description}}</p>
-                            <a class="waves-effect waves-light btn view-book yellow darken-3" href="editbookform.html?id={{this.book_id}}">
-                                <span>Edit Book</span>
-                            </a>
+                            <div class="row buttons">
+                                <a class="btn-floating waves-effect waves-light btn view-book yellow darken-3" href="editbookform.html?id={{this.book_id}}">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn-floating waves-effect waves-light btn view-book red delete-button" id="{{this.book_id}}">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

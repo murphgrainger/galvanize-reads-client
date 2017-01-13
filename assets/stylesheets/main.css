@@ -8,7 +8,8 @@ main {
   flex: 1 0 auto;
 }
 
-.nav-wrapper, .footer-copyright {
+nav, .footer-copyright{
+  padding-left: 1em;
   background-color: #29AEE8!important;
   color: white;
 }
@@ -21,4 +22,10 @@ main {
   height: 10vh;
   display: flex;
   align-items: center;
+}
+
+.footer-copyright .container {
+  display: flex;
+  justify-content: center;
+  font-size: .75em;
 }

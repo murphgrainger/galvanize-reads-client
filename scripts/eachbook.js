@@ -5,6 +5,7 @@ const cleanQuery = queryParse(window.location.search);
 $(document).ready(function() {
     getBooks(cleanQuery.id)
         .then(addBooktoPage)
+        .then(deleteBook)
         .catch(errorFunction);
 });
 
@@ -30,6 +31,24 @@ function addBooktoPage(book) {
     let html = template(context);
     $('.cards').html(html);
     return book;
+}
+
+function deleteBook(data) {
+    $('.delete-button').click(function(event) {
+        let deleteId = $(this).attr('id');
+        let bookObj = {
+            id: deleteId
+        };
+        $.ajax({
+            url: `${SERVER_URL}/books`,
+            method: "DELETE",
+            data: bookObj,
+            dataType: "json",
+            success: function() {
+                window.location.replace(`${CLIENT_URL}/books`);
+            }
+        });
+    });
 }
 
 function getURL() {

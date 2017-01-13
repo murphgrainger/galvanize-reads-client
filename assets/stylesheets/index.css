@@ -13,3 +13,19 @@ main {
   display: flex;
   justify-content: center
 }
+
+.author-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4em;
+}
+
+.author-container:hover {
+  background: #E3E3E7;
+}
+
+.author-col {
+margin-left: 3em;
+}
