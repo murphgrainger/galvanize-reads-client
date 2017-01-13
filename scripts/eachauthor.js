@@ -46,7 +46,7 @@ function deleteAuthor(data) {
             data: authorObj,
             dataType: "json",
             success: function() {
-                window.location.replace(`${CLIENT_URL}/authors`);
+                window.location.replace(`${CLIENT_URL}/authors.html`);
             }
         });
     });

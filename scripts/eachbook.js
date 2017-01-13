@@ -46,7 +46,7 @@ function deleteBook(data) {
             data: bookObj,
             dataType: "json",
             success: function() {
-                window.location.replace(`${CLIENT_URL}/books`);
+                window.location.replace(`${CLIENT_URL}/books.html`);
             }
         });
     });

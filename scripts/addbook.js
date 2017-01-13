@@ -37,7 +37,7 @@ function postBooks(data) {
         formObj.author_id = Number($(`.${formObj.author}`).attr('id'));
         console.log(formObj);
         $.post(`${SERVER_URL}/books`, formObj).then(function(result) {
-            window.location.replace(`${CLIENT_URL}/books`);
+            window.location.replace(`${CLIENT_URL}/books.html`);
         });
     });
 }

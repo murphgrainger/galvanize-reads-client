@@ -52,7 +52,7 @@ function editAuthor(data) {
             data: formObj,
             dataType: "json",
             success: function() {
-                window.location.replace(`${CLIENT_URL}/authors`);
+                window.location.replace(`${CLIENT_URL}/authors.html`);
             }
         });
     });
