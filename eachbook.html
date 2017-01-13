@@ -50,18 +50,20 @@
                         <div class="card-content">
                             <h6>{{this.title}}</h6>
                             <div class="row names">
-                                <a href="eachauthor.html?id={{this.author_id}}">
-                                    <span>{{this.fname}}
-                                        {{this.lname}}</span>
-                                </a>
+                                {{#each authors}}
+                                    <a href="eachauthor.html?id={{this.id}}">
+                                        <span>{{this.fname}}
+                                            {{this.lname}}&nbsp;&nbsp;&nbsp;</span>
+                                    </a>
+                                {{/each}}
                             </div>
                             <p class="description">{{this.genre}}</p>
                             <p class="description">{{this.description}}</p>
                             <div class="row buttons">
-                                <a class="btn-floating waves-effect waves-light btn view-book yellow darken-3" href="editbookform.html?id={{this.book_id}}">
+                                <a class="btn-floating waves-effect waves-light btn view-book yellow darken-3" href="editbookform.html?id={{this.id}}">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </a>
-                                <a class="btn-floating waves-effect waves-light btn view-book red delete-button" id="{{this.book_id}}">
+                                <a class="btn-floating waves-effect waves-light btn view-book red delete-button" id="{{this.id}}">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </a>
                             </div>

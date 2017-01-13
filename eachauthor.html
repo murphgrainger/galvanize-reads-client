@@ -49,16 +49,21 @@
                         <div class="card-content">
                             <h6>{{this.fname}}
                                 {{this.lname}}</h6>
-                            <div class="row title">
-                                <i class="fa fa-book" aria-hidden="true"></i>
-                                <a class="title" href="eachbook.html?id={{this.book_id}}">&nbsp;&nbsp;{{this.title}}</a>
+                            <div class="row names book-titles">
+                                {{#each books}}
+                                    <a href="eachbook.html?id={{this.id}}">
+                                        <i class="fa fa-book" aria-hidden="true"></i>
+                                        <span>{{this.title}}
+                                        </span>
+                                    </a>
+                                {{/each}}
                             </div>
                             <p class="description">{{this.biography}}</p>
                             <div class="row buttons">
-                                <a class="btn-floating waves-effect waves-light btn view-book yellow darken-3" href="editauthorform.html?id={{this.author_id}}">
+                                <a class="btn-floating waves-effect waves-light btn view-book yellow darken-3" href="editauthorform.html?id={{this.id}}">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </a>
-                                <a class="btn-floating waves-effect waves-light btn view-book red delete-button" id="{{this.author_id}}">
+                                <a class="btn-floating waves-effect waves-light btn view-book red delete-button" id="{{this.id}}">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </a>
                             </div>

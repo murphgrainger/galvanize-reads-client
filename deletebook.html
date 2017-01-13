@@ -53,10 +53,12 @@
                             <div class="col s8">
                                 <h6>{{this.title}}</h6>
                                 <div class="row names">
-                                    <a href="eachauthor.html?id={{this.author_id}}">
-                                        <span>{{this.fname}}
-                                            {{this.lname}}</span>
-                                    </a>
+                                    {{#each authors}}
+                                        <a href="eachauthor.html?id={{this.id}}">
+                                            <span>{{this.fname}}
+                                                {{this.lname}}&nbsp;&nbsp;&nbsp;</span>
+                                        </a>
+                                    {{/each}}
                                 </div>
                             </div>
                             <div class="col s4 button-col">

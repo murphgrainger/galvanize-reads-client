@@ -54,14 +54,17 @@
                                 <h6>{{this.fname}}
                                     {{this.lname}}</h6>
                                 <div class="row names">
-                                    <a href="eachbook.html?id={{this.book_id}}">
-                                        <span>{{this.title}}
-                                        </span>
-                                    </a>
+                                    {{#each books}}
+                                        <a href="eachbook.html?id={{this.id}}">
+                                            <i class="fa fa-book" aria-hidden="true"></i>
+                                            <span>{{this.title}}
+                                            </span>
+                                        </a>
+                                    {{/each}}
                                 </div>
                             </div>
                             <div class="col s4 button-col">
-                                <a class="btn-floating btn-large waves-effect waves-light red delete-button" id="{{this.author_id}}">
+                                <a class="btn-floating btn-large waves-effect waves-light red delete-button" id="{{this.id}}">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </a>
                             </div>

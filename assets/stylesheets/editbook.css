@@ -46,6 +46,7 @@ main {
   align-items: center;
 }
 
+
 .edit-button {
   width: 2.5em!important;
   height: 2.5em!important;
@@ -58,7 +59,7 @@ margin: 0;
 }
 
 .names {
-  font-size: 1em;
+  font-size: .75em;
 }
 
 .button-col {

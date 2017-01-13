@@ -55,6 +55,15 @@
                                     {{this.fname}}
                                     {{this.lname}}
                                 </p>
+                                <div class="row names">
+                                    {{#each books}}
+                                        <a href="eachbook.html?id={{this.id}}">
+                                            <i class="fa fa-book" aria-hidden="true"></i>
+                                            <span>{{this.title}}
+                                            </span>
+                                        </a>
+                                    {{/each}}
+                                </div>
                             </div>
                             <div class="col s4 button-col">
                                 <a class="btn-floating btn-large waves-effect waves-light yellow darken-3 edit-button" href="editauthorform.html?id={{this.id}}" id="{{this.book_id}}">

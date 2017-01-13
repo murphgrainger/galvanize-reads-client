@@ -95,3 +95,8 @@ main {
   flex-direction: row;
   align-items: center;
 }
+
+.book-titles {
+  display: flex;
+  flex-direction: column;
+}

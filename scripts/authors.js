@@ -34,7 +34,6 @@ function cleanData(data) {
     let bookIndex = {};
     let authorList = [];
     data.forEach(author => {
-        console.log(author);
         var newAuthor = {};
         var book = {};
         newAuthor.id = author.author_id;
@@ -58,7 +57,6 @@ function cleanData(data) {
             author.books = bookIndex[author.id];
             authors.push(author);
         }
-        console.log(authors);
         return authors;
     }, []);
 }
