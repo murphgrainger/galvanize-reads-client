@@ -53,10 +53,12 @@
                         <div class="card-content">
                             <div class="col s8">
                                 <h6>{{this.title}}</h6>
-                                <p class="description">
-                                    {{this.fname}}
-                                    {{this.lname}}
-                                </p>
+                                <div class="row names">
+                                    <a href="eachauthor.html?id={{this.author_id}}">
+                                        <span>{{this.fname}}
+                                            {{this.lname}}</span>
+                                    </a>
+                                </div>
                             </div>
                             <div class="col s4 button-col">
                                 <a class="btn-floating btn-large waves-effect waves-light red delete-button" id="{{this.book_id}}">

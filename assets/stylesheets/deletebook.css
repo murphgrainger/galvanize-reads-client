@@ -61,3 +61,7 @@ margin: 0;
   display: flex;
   justify-content: flex-end;
 }
+
+.names {
+  font-size: .75em;
+}

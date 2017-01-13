@@ -10,6 +10,7 @@ function getBooks() {
 }
 
 function showBooks(data) {
+    console.log(data);
     let source = $('#card-template').html();
     let template = Handlebars.compile(source);
     let context = {

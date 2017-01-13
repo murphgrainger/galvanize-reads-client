@@ -60,12 +60,10 @@
                         <div class="card-content">
                             <h6>{{this.title}}</h6>
                             <div class="row names">
-                                <p>
-                                    {{this.fname}}
-                                </p>
-                                <p>&nbsp;
-                                    {{this.lname}}
-                                </p>
+                                <a href="eachauthor.html?id={{this.author_id}}">
+                                    <span>{{this.fname}}
+                                        {{this.lname}}</span>
+                                </a>
                             </div>
                             <p class="genre">{{this.genre}}</p>
                             <p class="description">{{this.description}}</p>
