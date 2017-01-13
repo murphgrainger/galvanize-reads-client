@@ -31,6 +31,7 @@ function getUrl() {
 }
 
 function cleanData(data) {
+    console.log(data);
     let bookIndex = {};
     let authorList = [];
     data.forEach(author => {

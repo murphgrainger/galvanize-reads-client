@@ -4,9 +4,10 @@ const cleanQuery = queryParse(window.location.search);
 
 $(document).ready(function() {
     getBooks(cleanQuery.id)
+        .then(cleanData)
         .then(addBooktoPage)
-        .then(editBook)
-        .catch(errorFunction);
+        .then(editBook);
+    // .catch(errorFunction);
 });
 
 function queryParse(query) {
@@ -23,6 +24,7 @@ function getBooks(id) {
 }
 
 function addBooktoPage(book) {
+    console.log(book);
     let source = $('#book-template').html();
     let template = Handlebars.compile(source);
     let context = {
@@ -38,7 +40,7 @@ function editBook(data) {
     $('#edit-button').click(function(event) {
         event.preventDefault();
         let formObj = {};
-        formObj.book_id = data[0].book_id;
+        formObj.book_id = data[0].id;
         formObj.title = $('#title').val();
         formObj.genre = $('#genre').val();
         formObj.description = $('#description').html();
@@ -46,7 +48,7 @@ function editBook(data) {
         formObj.author = $('#author-field').val();
         formObj.author_id = Number($(`.${formObj.author}`).attr('id'));
         $.ajax({
-            url: `${SERVER_URL}/books/${data[0].book_id}`,
+            url: `${SERVER_URL}/books/${data[0].id}`,
             method: "PUT",
             data: formObj,
             dataType: "json",
@@ -75,4 +77,36 @@ function getUrl2() {
     } else {
         return 'https://galvanize-reads-mg.firebaseapp.com';
     }
+}
+
+function cleanData(data) {
+    let authorsIndex = {};
+    let bookList = [];
+    data.forEach(book => {
+        var newBook = {};
+        var author = {};
+        newBook.id = book.book_id;
+        newBook.title = book.title;
+        newBook.description = book.description;
+        newBook.genre = book.genre;
+        newBook.cover = book.cover;
+        author.id = book.author_id;
+        author.fname = book.fname;
+        author.lname = book.lname;
+        author.biography = book.biography;
+        author.portrait = book.portrait;
+        bookList.push(newBook);
+        authorsIndex[book.book_id] = authorsIndex[book.book_id] || [];
+        authorsIndex[book.book_id].push(author);
+    });
+    return bookList.reduce((books, book, index, array) => {
+        if (array[index + 1] && book.id !== array[index + 1].id) {
+            book.authors = authorsIndex[book.id];
+            books.push(book);
+        } else if (!array[index + 1]) {
+            book.authors = authorsIndex[book.id];
+            books.push(book);
+        }
+        return books;
+    }, []);
 }

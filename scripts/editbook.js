@@ -5,8 +5,8 @@ const CLIENT_URL = getUrl2();
 $(document).ready(function() {
     getBooks()
         .then(cleanData)
-        .then(showBooks)
-        // .then(editBookRedirect);
+        .then(showBooks);
+    // .then(editBookRedirect);
 });
 
 
@@ -15,6 +15,7 @@ function getBooks() {
 }
 
 function showBooks(data) {
+    console.log(data);
     let source = $('#card-template').html();
     let template = Handlebars.compile(source);
     let context = {
@@ -70,7 +71,6 @@ function cleanData(data) {
             book.authors = authorsIndex[book.id];
             books.push(book);
         }
-        console.log(books);
         return books;
     }, []);
 }

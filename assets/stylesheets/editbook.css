@@ -60,6 +60,8 @@ margin: 0;
 
 .names {
   font-size: .75em;
+  display: flex;
+  flex-direction: column;
 }
 
 .button-col {
