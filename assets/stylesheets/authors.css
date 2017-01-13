@@ -31,6 +31,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 5em;
 }
 
 .card-image {
@@ -52,11 +53,24 @@ main {
   height: 2em;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 1em;
   background: #29AEE8
 }
 
 .view-author span{
   padding-top: 2.6em;
+}
 
+.names {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: .5em;
+}
+
+.title {
+  margin-bottom: .5em;
+  font-size: .8em;
+  display: flex;
+  flex-direction: row;
 }

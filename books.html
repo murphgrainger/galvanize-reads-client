@@ -59,11 +59,15 @@
                     <div class="card-stacked">
                         <div class="card-content">
                             <h6>{{this.title}}</h6>
-                            <p class="description">
-                                {{this.fname}}
-                                {{this.lname}}
-                            </p>
-                            <p class="description">{{this.genre}}</p>
+                            <div class="row names">
+                                <p>
+                                    {{this.fname}}
+                                </p>
+                                <p>&nbsp;
+                                    {{this.lname}}
+                                </p>
+                            </div>
+                            <p class="genre">{{this.genre}}</p>
                             <p class="description">{{this.description}}</p>
                             <a class="waves-effect waves-light btn view-book" href="eachbook.html?id={{this.book_id}}">
                                 <span>View Book</span>

@@ -59,7 +59,14 @@
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h6>{{this.fname}}{{this.lname}}</h6>
+                            <div class="row names">
+                                <h6>{{this.fname}}</h6>
+                                <h6>&nbsp;{{this.lname}}</h6>
+                            </div>
+                            <div class="row title">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                                <p class="title">&nbsp;&nbsp;{{this.title}}</p>
+                            </div>
                             <p class="description">{{this.biography}}</p>
                             <a class="waves-effect waves-light btn view-author" href="eachauthor.html?id={{this.id}}">
                                 <span>View Author</span>
