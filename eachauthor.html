@@ -5,13 +5,13 @@
         <title>Galvanize Reads</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-        <script src="scripts/authors.js" type="text/javascript"></script>
+        <script src="scripts/eachauthor.js" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/stylesheets/main.css" media="screen" title="no title">
-        <link rel="stylesheet" href="assets/stylesheets/authors.css" media="screen" title="no title">
+        <link rel="stylesheet" href="assets/stylesheets/books.css" media="screen" title="no title">
     </head>
     <body>
         <header>
@@ -21,48 +21,38 @@
                         <i class="material-icons">library_books</i>Galvanize Reads</a>
                     <ul id="nav-mobile" class="right">
                         <li>
-                            <a href="books.html">Books</a>
+                            <a href="books">Books</a>
                         </li>
                         <li>
-                            <a href="authors.html">Authors</a>
+                            <a href="authors">Authors</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
-            <div class="col s2 button-container">
-                <a class="btn-floating waves-effect waves-light btn green" href="/addauthor.html">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                </a>
-                <a class="btn-floating waves-effect waves-light btn yellow darken-3" href="/editauthor.html">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                </a>
-                <a class="btn-floating waves-effect waves-light btn red" href="/deleteauthor.html">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                </a>
-            </div>
+            <div class="col s2 button-container"></div>
             <div class="col s10 cards"></div>
         </main>
         <footer class="footer-copyright">
             <div class="container">
                 © 2017 Murph Grainger
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </footer>
-
         <script id="card-template" type="text/x-handlebars-template">
-            {{#each data}}
+            {{#each author}}
                 <div class="card horizontal">
                     <div class="card-image">
                         <img class="card-image" src="{{this.portrait}}">
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h6>{{this.fname}}{{this.lname}}</h6>
+                            <h6>{{this.fname}}
+                                {{this.lname}}</h6>
+                            <p class="books book-title">{{this.title}}</p>
                             <p class="description">{{this.biography}}</p>
-                            <a class="waves-effect waves-light btn view-author" href="eachauthor.html?id={{this.id}}">
-                                <span>View Author</span>
+                            <a class="waves-effect waves-light btn view-book yellow darken-3" href="editauthor.html?id={{this.book_id}}">
+                                <span>Edit Book</span>
                             </a>
                         </div>
                     </div>

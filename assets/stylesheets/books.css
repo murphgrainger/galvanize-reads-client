@@ -65,5 +65,8 @@ main {
 
 .view-book span{
   padding-top: 2.6em;
+}
 
+.book-title {
+  font-size: .75em;
 }

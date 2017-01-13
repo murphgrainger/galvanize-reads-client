@@ -46,3 +46,17 @@ main {
     padding-top: 1em;
     padding-left: 1em;
 }
+
+.view-author {
+  width: 7em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  background: #29AEE8
+}
+
+.view-author span{
+  padding-top: 2.6em;
+
+}
