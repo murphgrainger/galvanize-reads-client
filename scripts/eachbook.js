@@ -48,7 +48,7 @@ function getUrl() {
     if (window.location.host.indexOf('localhost') != -1) {
         return 'http://localhost:3000';
     } else {
-        return 'https://galvanize-reads-mg.firebaseapp.com';
+        return 'https://galvanize-reads-mg.herokuapp.com';
     }
 }
 

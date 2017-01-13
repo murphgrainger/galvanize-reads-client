@@ -33,7 +33,6 @@ function getUrl() {
     }
 }
 
-
 function getUrl2() {
     if (window.location.host.indexOf('localhost') != -1) {
         return 'http://localhost:8080';
