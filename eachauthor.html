@@ -49,7 +49,10 @@
                         <div class="card-content">
                             <h6>{{this.fname}}
                                 {{this.lname}}</h6>
-                            <p class="books book-title">{{this.title}}</p>
+                            <div class="row title">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                                <a class="title" href="eachbook.html?id={{this.book_id}}">&nbsp;&nbsp;{{this.title}}</a>
+                            </div>
                             <p class="description">{{this.biography}}</p>
                             <a class="waves-effect waves-light btn view-book yellow darken-3" href="editauthor.html?id={{this.book_id}}">
                                 <span>Edit Book</span>

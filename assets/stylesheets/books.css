@@ -83,3 +83,8 @@ main {
   padding-bottom: .5em;
   font-size: .6em;
 }
+
+.title {
+  font-size: .75em;
+  margin-bottom: .25em;
+}
